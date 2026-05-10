@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+:root {
+  --foreground: #000000;
+}
+
+@theme inline {
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: var(--foreground);
+  /* Fallback while the hero image loads */
+  background-color: #e8ebe6;
+}
