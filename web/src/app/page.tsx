@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { HeroBackground } from "@/components/HeroBackground";
-
-const neuroworkLabsUrl = "https://github.com/neuroworklabs";
-const neuronsUrl = "https://github.com/neuroworklabs/Neurons";
+import {
+  homeDescriptionParts,
+  homeHeadline,
+  neuronsUrl,
+  neuroworkLabsUrl,
+} from "@/lib/home";
 
 export default function Home() {
   return (
@@ -21,8 +24,9 @@ export default function Home() {
         />
 
         <h1 className="mt-10 max-w-[min(100%,40rem)] text-balance text-center text-[clamp(1.5rem,4.5vw+0.2rem,2.75rem)] font-semibold leading-[1.18] tracking-tight text-[#000000] sm:mt-12 sm:leading-[1.15]">
-          Build Something{" "}
-          <span className="text-[#76B900]">Humanity</span> Needs
+          {homeHeadline.prefix}
+          <span className="text-[#76B900]">{homeHeadline.highlight}</span>
+          {homeHeadline.suffix}
         </h1>
 
         <p className="mt-6 max-w-[min(100%,36rem)] text-pretty text-center text-[clamp(0.9375rem,2.2vw+0.4rem,1.125rem)] font-normal leading-relaxed text-[#000000] sm:mt-8">
@@ -32,19 +36,18 @@ export default function Home() {
             rel="noopener noreferrer"
             className="font-semibold text-[#76B900] underline decoration-[#76B900]/40 underline-offset-4 transition-colors hover:text-[#5ea000] hover:decoration-[#5ea000]/50"
           >
-            Neurowork Labs
-          </a>{" "}
-          is an open-source organization focused on AI-powered software development. Our
-          first project is{" "}
+            {homeDescriptionParts.leadLabel}
+          </a>
+          {homeDescriptionParts.afterLead}
           <a
             href={neuronsUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-[#76B900] underline decoration-[#76B900]/40 underline-offset-4 transition-colors hover:text-[#5ea000] hover:decoration-[#5ea000]/50"
           >
-            Neurons
-          </a>, a single-vendor AI agent marketplace from where teams in the world can
-          integrate AI agents into their websites and web applications.
+            {homeDescriptionParts.projectLabel}
+          </a>
+          {homeDescriptionParts.afterProject}
         </p>
       </main>
     </div>

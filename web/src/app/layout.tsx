@@ -8,10 +8,26 @@ const outfit = Outfit({
   weight: ["400", "600"],
 });
 
+const siteDescription =
+  "Open-source organization building AI-based software products, including Neurons—an AI agent marketplace for the web.";
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://neuroworklabs.com"),
   title: "Neurowork Labs",
-  description:
-    "Open-source organization building AI-based software products, including Neurons—an AI agent marketplace for the web.",
+  description: siteDescription,
+  openGraph: {
+    title: "Neurowork Labs",
+    description: siteDescription,
+    url: "/",
+    siteName: "Neurowork Labs",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Neurowork Labs",
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
