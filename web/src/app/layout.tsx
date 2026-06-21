@@ -9,7 +9,7 @@ const outfit = Outfit({
 });
 
 const siteDescription =
-  "Open-source organization building AI-based software products, including Neurons—an AI agent marketplace for the web.";
+  "Neurowork Labs is a hybrid open-source AI engineering infrastructure company building software that powers the design, development, and manufacturing of next-generation physical technologies.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://neuroworklabs.com"),

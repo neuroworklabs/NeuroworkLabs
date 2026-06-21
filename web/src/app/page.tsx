@@ -3,7 +3,6 @@ import { HeroBackground } from "@/components/HeroBackground";
 import {
   homeDescriptionParts,
   homeHeadline,
-  neuronsUrl,
   neuroworkLabsUrl,
 } from "@/lib/home";
 
@@ -39,15 +38,6 @@ export default function Home() {
             {homeDescriptionParts.leadLabel}
           </a>
           {homeDescriptionParts.afterLead}
-          <a
-            href={neuronsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-semibold text-[#76B900] underline decoration-[#76B900]/40 underline-offset-4 transition-colors hover:text-[#5ea000] hover:decoration-[#5ea000]/50"
-          >
-            {homeDescriptionParts.projectLabel}
-          </a>
-          {homeDescriptionParts.afterProject}
         </p>
       </main>
     </div>

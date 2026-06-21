@@ -1,5 +1,4 @@
 export const neuroworkLabsUrl = "https://github.com/neuroworklabs";
-export const neuronsUrl = "https://github.com/neuroworklabs/Neurons";
 
 export const homeHeadline = {
   prefix: "Build Something ",
@@ -10,17 +9,12 @@ export const homeHeadline = {
 export const homeDescriptionParts = {
   leadLabel: "Neurowork Labs",
   afterLead:
-    " is an open-source organization focused on AI-powered software development. Our first project is ",
-  projectLabel: "Neurons",
-  afterProject:
-    ", a single-vendor AI agent marketplace from where teams in the world can integrate AI agents into their websites and web applications.",
+    " is a hybrid open-source AI engineering infrastructure company building software that powers the design, development, and manufacturing of next-generation physical technologies.",
 } as const;
 
 export const homeDescription = [
   homeDescriptionParts.leadLabel,
   homeDescriptionParts.afterLead,
-  homeDescriptionParts.projectLabel,
-  homeDescriptionParts.afterProject,
 ].join("");
 
 /**
@@ -46,15 +40,7 @@ const splitTextTokens = (input: string): OgTextToken[] =>
 export const homeDescriptionOgTokens: ReadonlyArray<OgDescriptionToken> = [
   { kind: "highlight", text: homeDescriptionParts.leadLabel },
   ...splitTextTokens(
-    "is an open-source organization focused on AI-powered software development. Our first project is",
-  ),
-  {
-    kind: "highlight",
-    text: homeDescriptionParts.projectLabel,
-    trailing: ",",
-  },
-  ...splitTextTokens(
-    "a single-vendor AI agent marketplace from where teams in the world can integrate AI agents into their websites and web applications.",
+    "is a hybrid open-source AI engineering infrastructure company building software that powers the design, development, and manufacturing of next-generation physical technologies.",
   ),
 ];
 
