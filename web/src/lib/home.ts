@@ -1,9 +1,9 @@
 export const neuroworkLabsUrl = "https://github.com/neuroworklabs";
 
 export const homeHeadline = {
-  prefix: "Build Something ",
-  highlight: "Humanity",
-  suffix: " Needs",
+  prefix: "Software for ",
+  highlight: "Physical",
+  suffix: " Innovation",
 } as const;
 
 export const homeDescriptionParts = {
